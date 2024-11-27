@@ -11,11 +11,11 @@
             background: linear-gradient(135deg, #1e1e1e, #292929);
             color: #fff;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
-            overflow: hidden;
         }
 
         header {
@@ -46,11 +46,27 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             animation: slideIn 1.5s ease-out;
+            max-width: 720px;
+            margin: 20px;
         }
 
         .description {
             margin-top: 15px;
             font-size: 1.2em;
+        }
+
+        .video-container {
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
         }
 
         .button {
@@ -77,9 +93,7 @@
             padding: 15px;
             background-color: #333;
             color: #fff;
-            margin-top: 20px;
-            position: absolute;
-            bottom: 0;
+            margin-top: auto;
             width: 100%;
         }
 
@@ -181,6 +195,14 @@
         <p class="description">
             JT EaglerCraft is a sandbox game experience where players build, mine, and explore endless worlds. Dive into an epic adventure now!
         </p>
+
+        <!-- Video Section -->
+        <div class="video-container">
+            <video controls>
+                <source src="Official Minecraft Trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
         <!-- Play Button -->
         <button class="button" id="playNow">Play Now</button>
